@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  margin: 0;
-  padding: 30px;
-  min-width: 360px;
-  border-radius: 30px;
+export const Container = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 768px;
+  border-radius: 20px;
 
-  background-color: #1966d1;
+  background-color: #1a202c89;
+  backdrop-filter: blur(5px);
 `;

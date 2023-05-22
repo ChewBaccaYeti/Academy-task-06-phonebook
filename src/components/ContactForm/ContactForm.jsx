@@ -3,7 +3,7 @@ import { addContact } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/contacts/selector';
 import { Formik, Field, ErrorMessage } from 'formik';
 import { Form, Label, Button } from './ContactForm.styled';
-import { ContactSchema, phoneNumberMask } from 'components/Utils/Validation';
+import { ContactSchema, phoneNumberMask } from 'components/Utils/Validate';
 import MaskedInput from 'react-text-mask';
 import toast from 'react-hot-toast';
 
@@ -21,7 +21,9 @@ export const ContactForm = () => {
         );
         return duplicateName
           ? toast(`${values.name} is already in contacts.`, { icon: '⚠️' })
-          : (dispatch(addContact(values)), action.resetForm());
+          : (dispatch(addContact(values)),
+            toast.success(`${values.name} added to contacts.`),
+            action.resetForm());
       }}
     >
       <Form>
@@ -30,6 +32,7 @@ export const ContactForm = () => {
           <Field
             type="text"
             name="name"
+            as="input"
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           />
@@ -38,8 +41,9 @@ export const ContactForm = () => {
         <Label>
           Number*
           <Field
-            name="number"
             type="tel"
+            name="number"
+            as="input"
             component={({ field }) => (
               <MaskedInput
                 {...field}
