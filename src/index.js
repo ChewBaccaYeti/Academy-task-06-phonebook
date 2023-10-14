@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter basename="/Academy-task-06-phonebook">
+        <BrowserRouter basename="/Moon-phonebook">
           <App />
         </BrowserRouter>
       </PersistGate>

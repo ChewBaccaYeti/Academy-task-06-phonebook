@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <Container>
       <Title>
-        Hello, this is your PhoneBook. It is designed to help your brain not
-        remember numbers, but write them down. Create your own unique account
-        and get the opportunity to record your contacts.
+        The Moon is alone and beautiful by being itself.
+        Lonely neighbor. And I am - your Phonebook. 
+        Nothing more, nothing less.
       </Title>
     </Container>
   );

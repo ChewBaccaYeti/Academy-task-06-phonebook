@@ -1,6 +1,6 @@
 import React from 'react';
-import videoBg from './videoBg.mp4';
-import { Video } from './VideoBg.styled';
+import videoBg from './moonBg.mp4';
+import { Video } from './moonBg.styled';
 
 export const BackgroundVideo = () => {
   return (

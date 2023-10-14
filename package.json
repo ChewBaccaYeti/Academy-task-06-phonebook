@@ -1,8 +1,8 @@
 {
-  "name": "Academy-task-06-phonebook",
+  "name": "Moon-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chewbaccayeti.github.io/Academy-task-06-phonebook/",
+  "homepage": "https://chewbaccayeti.github.io/Moon-phonebook/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.3",
